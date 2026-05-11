@@ -31,13 +31,5 @@ pipeline {
                 bat 'npm test'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                script {
-                    docker.build('tandin2007/node-app:latest')
-                }
-            }
-        }
     }
 }
